@@ -97,3 +97,44 @@ def marks(M, P, C, B, ENG):
     return Sum
 
 print(marks(90, 90, 90, 90, 90))
+
+#Function of Factorial
+
+def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+print(factorial(5))
+
+#Interest
+
+def interest(money, rate, time):
+    return (money * rate * time) / 100
+
+print(interest(5000, 8, 3), "$")
+
+#Calculator Using Function
+
+def calculator(a, operator, b):
+    if operator == "+":
+        return a + b
+    elif operator == "-":
+        return a - b
+    elif operator == "*":
+        return a * b
+    elif operator == "/":
+        if b != 0:
+            return a / b
+        else:
+            return "Error"
+    else:
+        return "Error By operator"
+        
+num1 = float(input("Enter Number: "))
+opera = input("Enter Operator: ")
+num2 = float(input("Enter Number: "))
+
+result = calculator(num1, opera, num2)
+print("Result", result )
